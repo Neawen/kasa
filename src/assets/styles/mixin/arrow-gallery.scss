@@ -1,0 +1,9 @@
+@mixin arrow-style {
+  position: absolute;
+  height: 4.9rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    height: 1.1rem;
+  }
+}

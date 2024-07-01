@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import "../Collapse/Collapse.scss";
 import arrow from "../../assets/images/arrow-back.png";
 
-const Collapse = ({ housing, aboutData }) => {
+// house from App.js
+// aboutData from pages/About.js
+const Collapse = ({ house, aboutData }) => {
     // table to add index of open Sections
     const [openText, setOpenText] = useState([]);
 
@@ -35,7 +37,8 @@ const Collapse = ({ housing, aboutData }) => {
                     </p>
                 </article>
             )) : 
-            housing.map()}
+            <div>{house.title}</div>
+            }
         </section>
     );
 };

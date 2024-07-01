@@ -21,8 +21,10 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home housing={housing}></Home>}></Route>
-        <Route path="/about" element={<About housing={housing}></About>}></Route>
-        <Route path="/housing/:id" element={<Housing></Housing>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        {housing.map((house, index) => (
+          <Route path={`/housing/${house.id}`} key={index} element={<Housing house={house}></Housing>}></Route>
+        ))}
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
       <Footer></Footer>

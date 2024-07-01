@@ -1,11 +1,14 @@
 import React from 'react';
 import Collapse from '../../components/Collapse/Collapse';
+import Slideshow from "../../components/Slideshow/Slideshow";
 
-function Housing( {housing}) {
+function Housing({ house }) {
+    console.log(house);
     return (
-        <div>
-            {/* <Collapse housing={housing}></Collapse> */}
-        </div>
+        <main className='main'>
+            <Slideshow house={house}></Slideshow>
+            <Collapse house={house}></Collapse>
+        </main>
     );
 };
 
