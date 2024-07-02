@@ -25,7 +25,8 @@ const Slideshow = ({ house }) => {
                 src={house.pictures[currentIndex]}
                 alt={house.title}
                 className="section-gallery__photo"></img>
-
+            
+            {/* if house.pictures.length is superior or equal to 2 */}
             {house.pictures.length >= 2
                 && (<>
                     <img
