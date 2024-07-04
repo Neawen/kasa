@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.scss';
 import { Link } from 'react-router-dom';
 
+// housing from Home
 const Card = ({ housing }) => {
     return (
         <ul className='container-housing'>
