@@ -9,7 +9,7 @@ const Collapse = ({ house, aboutData, data }) => {
     const [openText, setOpenText] = useState([]);
 
     function handleArrow(index) {
-        // if index clicked is not in openText Table;,kl
+        // if index clicked is not in openText Table
         if (!openText.includes(index)) {
             setOpenText([...openText, index]);
         } else {

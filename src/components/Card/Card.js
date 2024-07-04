@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ housing }) => {
     return (
-        <ul className='containerHousing'>
+        <ul className='container-housing'>
             {housing.map((house, index) => (
-                <li key={index} className='containerHousing__house'>
+                <li key={index} className='container-housing__house'>
                     <Link to={`/housing/${house.id}`}>
                         <img src={house.cover} alt={house.title}></img>
                         <p>{house.title}</p>
