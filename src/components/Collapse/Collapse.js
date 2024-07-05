@@ -61,47 +61,4 @@ const Collapse = ({ house, aboutData, data }) => {
     )
 }
 
-
-// ))
-//     : data.map((element, index) => (
-//         <article
-//             // class is use to hide or not the background of articles
-//             className={`sectionCollapse__article article--housing ${openText.includes(`data-${index}`) ? "open" : null}`}
-//             key={`data-${index}`}
-//         >
-//             <div className='sectionCollapse__article__containerTitle'>
-//                 <h2>{element}</h2>
-//                 <img
-//                     src={arrow}
-//                     alt="flèche directionnelle"
-//                     onClick={() => handleArrow(`data-${index}`)}
-//                     // if openText includes index of the section, add openArrow Class
-//                     className={openText.includes(`data-${index}`) ? "openArrow" : null}
-//                 ></img>
-//             </div>
-//             {/* if index is in OpenText table, add openText Class */}
-//             <div className={`sectionCollapse__article__description ${openText.includes(`data-${index}`) ? "openText" : null}`}>
-//                 {/* if item is description */}
-//                 {element === "Description" ?
-//                     // add house.description
-//                     house.description
-//                     : <ul style={{ listStyleType: "none", padding: 0 }}>
-//                         {/* for each element in equipment table */}
-//                         {house.equipments.map((equipment, i) => (
-//                             <li key={`${equipment}-${i}`}>
-//                                 {equipment}
-//                             </li>
-//                         ))
-//                         }
-//                     </ul>
-//                 }
-//             </div>
-//         </article>
-//     ))
-
-// }
-
-//             ));
-// };
-
 export default Collapse;
