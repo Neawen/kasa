@@ -40,20 +40,18 @@ const Collapse = ({ house, aboutData, data }) => {
                     </div>
                     {/* if index is in OpenText table, add openText Class */}
                     <div className={`sectionCollapse__article__description ${openText.includes(`key-${index}`) ? "openText" : null}`}>
-                        <div>
-                            {aboutData ? <p>{item.content}</p>
-                                : (item === "Description" ? <p>{house.description}</p>
-                                    : <ul style={{ listStyleType: "none", padding: 0 }}>
-                                        {/* for each element in equipment table */}
-                                        {house.equipments.map((equipment, i) => (
-                                            <li key={`${equipment}-${i}`}>
-                                                {equipment}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )
-                            }
-                        </div>
+                        {aboutData ? <p>{item.content}</p>
+                            : (item === "Description" ? <p>{house.description}</p>
+                                : <ul style={{ listStyleType: "none", padding: 0 }}>
+                                    {/* for each element in equipment table */}
+                                    {house.equipments.map((equipment, i) => (
+                                        <li key={`${equipment}-${i}`}>
+                                            {equipment}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )
+                        }
                     </div>
                 </article>
             ))}
