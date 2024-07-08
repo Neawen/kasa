@@ -12,9 +12,9 @@ import housingData from '../src/data/logements.json';
 
 function App() {
   const [housing, setHousing] = useState([]);
-    useEffect(() => {
-        setHousing(housingData)
-    }, []);
+  useEffect(() => {
+    setHousing(housingData)
+  }, []);
 
   return (
     <Router>
@@ -23,7 +23,11 @@ function App() {
         <Route path="/" element={<Home housing={housing}></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         {housing.map((house, index) => (
-          <Route path={`/housing/${house.id}`} key={index} element={<Housing house={house}></Housing>}></Route>
+          <Route
+            path={`/housing/${house.id}`}
+            key={index}
+            element={<Housing house={house}></Housing>}
+          ></Route>
         ))}
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>

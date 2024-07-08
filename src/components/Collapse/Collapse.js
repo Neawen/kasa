@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import "../Collapse/Collapse.scss";
 import arrow from "../../assets/images/arrow-back.png";
 
-// house from App and Housing
-// aboutData from pages/About.js
-// data from About (contains data title of articles)
+// house === housing mapped from App.js then Housing.js
+// aboutData from pages/About.js (contains titles and their content)
+// data from Housing.js (contains data title of articles)
 const Collapse = ({ house, aboutData, data }) => {
     // table to add index of open Sections
     const [openText, setOpenText] = useState([]);
@@ -36,7 +36,8 @@ const Collapse = ({ house, aboutData, data }) => {
                             alt="flèche directionnelle"
                             onClick={() => handleArrow(`key-${index}`)}
                             // if openText includes index of the section, add openArrow Class
-                            className={openText.includes(`key-${index}`) ? "openArrow" : null}></img>
+                            className={openText.includes(`key-${index}`) ? "openArrow" : null}
+                        ></img>
                     </div>
                     {/* if index is in OpenText table, add openText Class */}
                     <div className={`sectionCollapse__article__description ${openText.includes(`key-${index}`) ? "openText" : null}`}>

@@ -3,7 +3,7 @@ import Card from '../../components/Card/Card';
 import './Home.scss';
 import bannerImg from '../../assets/images/banner-home.png';
 
-
+// housing from App.js
 function Home({housing}) {
 
     return (

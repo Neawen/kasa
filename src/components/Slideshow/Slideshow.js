@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import arrow from "../../assets/images/arrow-back.png";
 import "./Slideshow.scss";
 
+// house === housing mapped from App.js then Housing.js
 const Slideshow = ({ house }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -20,7 +21,7 @@ const Slideshow = ({ house }) => {
     }
 
     return (
-        <section className='section-gallery'>
+        <section className='section-gallery'>git
             <img
                 src={house.pictures[currentIndex]}
                 alt={house.title}
