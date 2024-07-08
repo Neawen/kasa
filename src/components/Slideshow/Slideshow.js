@@ -21,7 +21,7 @@ const Slideshow = ({ house }) => {
     }
 
     return (
-        <section className='section-gallery'>git
+        <section className='section-gallery'>
             <img
                 src={house.pictures[currentIndex]}
                 alt={house.title}
