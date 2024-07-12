@@ -10,6 +10,7 @@ const Card = ({ housing }) => {
                 <li key={index} className='container-housing__house'>
                     <Link to={`/housing/${house.id}`}>
                         <img src={house.cover} alt={house.title}></img>
+                        <div className='card-filter'></div>
                         <p>{house.title}</p>
                     </Link>
                 </li>
